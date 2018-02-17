@@ -1,20 +1,11 @@
 // Import MySQL connection.
 var connection = require("../config/connection.js");
 
-// Connect to MySQL database
-connection.connect(function(err) {
-    if (err) {
-        console.error('error connecting: ' + err.stack);
-        return;
-    };
-    console.log('connected as id ' + connection.threadId);
-});
-
 // Methods for MySQL commands
 var orm = {
 
     // selectAll()
-    selectAll: function(callback) {
+    selectAll: function(table, callback) {
 
         // Run MySQL Query
         connection.query('SELECT * FROM burgers', function(err, result) {
@@ -64,11 +55,11 @@ var orm = {
         // ======================================== //
 
         // Run MySQL Query
-        connection.query('INSERT INTO burgers SET ?', {
-            burger_name: burger_name,
-            devoured: false,
-            created_at: timestamp
-        }, function(err, result) {
+        connection.query('INSERT INTO burgers (burger_name, devoured,created_at) values (?,?,?)', [
+            burger_name,
+            '0',
+            timestamp
+        ], function(err, result) {
             if (err) throw err;
             callback(result);
         });
@@ -81,7 +72,7 @@ var orm = {
         // Run MySQL Query
         connection.query('UPDATE burgers SET ? WHERE ?', [{ devoured: true }, { id: burgerID }], function(err, result) {
             if (err) throw err;
-            callback(result);
+            return callback(result);
         });
 
     }

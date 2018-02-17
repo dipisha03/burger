@@ -6,9 +6,9 @@ var bodyParser = require('body-parser')
 
 var app = express();
 // Setup port 
-var PORT = process.env.PORT || 6000;
+var PORT = process.env.PORT || 8080;
 
-app.get("/", function(req, res) { res.json("check") });
+
 
 //Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
@@ -25,7 +25,7 @@ app.set('view engine', 'handlebars');
 
 
 var router = require('./controllers/burgers_controller.js');
-
+//app.get("/", function(req, res) { res.json("check") });
 app.use('/', router);
 
 app.listen(PORT, function() {
