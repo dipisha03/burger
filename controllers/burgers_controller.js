@@ -5,7 +5,7 @@ var router = express.Router();
 // Import the model (burger.js) to use its database functions.
 var burger = require("../models/burger.js");
 
-// ================= Create routes ======================= //
+// ================= Create routes ================== //
 // Index Redirect
 router.get('/', function(req, res) {
     res.redirect('/index');
@@ -14,6 +14,7 @@ router.get('/', function(req, res) {
 
 // Index Page (render all burgers to DOM)
 router.get('/index', function(req, res) {
+    console.log("check");
     burger.selectAll(function(data) {
         var hbsObject = { burgers: data };
         //console.log(hbsObject);

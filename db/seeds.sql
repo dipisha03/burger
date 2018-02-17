@@ -1,6 +1,6 @@
 
-INSERT INTO burgers (burger_name) VALUES ('Cheese');
-INSERT INTO burgers (burger_name) VALUES ('Veggie');
-INSERT INTO burgers (burger_name) VALUES ('Chicken');
+INSERT INTO burgers (burger_name, devoured) VALUES ('Truffle', false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Blue Cheese', false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Queso', false);
 
 SELECT * FROM burgers 

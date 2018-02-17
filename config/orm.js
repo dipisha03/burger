@@ -66,7 +66,7 @@ var orm = {
         // Run MySQL Query
         connection.query('INSERT INTO burgers SET ?', {
             burger_name: burger_name,
-            devoured: true,
+            devoured: false,
             created_at: timestamp
         }, function(err, result) {
             if (err) throw err;
