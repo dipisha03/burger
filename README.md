@@ -14,3 +14,5 @@
 Technologies used: JavaScript | MySQL | Node | Express | Handlebars | ORM
 
 Heroku link: https://nameless-brook-91675.herokuapp.com/
+
+![Alt text](https://raw.githubusercontent.com/dipisha03/bamazon/master/screenshots/Screenshot1.png "Items View")
