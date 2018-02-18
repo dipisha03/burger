@@ -6,16 +6,15 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 // ================= Create routes ================== //
+
 // Index Redirect
 router.get('/', function(req, res) {
     res.render('index');
-    console.log("check");
 });
 
 
 // Index Page (render all burgers to DOM)
 router.get('/index', function(req, res) {
-    console.log("check");
     burger.selectAll('burgers', function(data) {
         var hbsObject = { burgers: data };
         //console.log(hbsObject);
@@ -38,7 +37,7 @@ router.post('/burger/eat/:id', function(req, res) {
         res.redirect('/index');
     });
 });
-// ----------------------------------------------------
+
 
 // Export routes for server.js to use.
 module.exports = router;

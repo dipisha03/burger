@@ -72,7 +72,7 @@ var orm = {
         // Run MySQL Query
         connection.query('UPDATE burgers SET ? WHERE ?', [{ devoured: true }, { id: burgerID }], function(err, result) {
             if (err) throw err;
-            return callback(result);
+            callback(result);
         });
 
     }
