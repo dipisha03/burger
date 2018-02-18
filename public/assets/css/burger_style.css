@@ -6,11 +6,11 @@ img {
     width: 25%;
 }
 
-.devour {
-    color: black;
+.title {
+    color: yellow;
 }
 
 .tiny_text {
-    font-size: 11px;
+    font-size: 20px;
     color: black;
 }
