@@ -4,18 +4,16 @@ var connection = require("../config/connection.js");
 // Methods for MySQL commands
 var orm = {
 
-    // selectAll()
+    // ============== selectAll() ======================== //
     selectAll: function(table, callback) {
-
         // Run MySQL Query
         connection.query('SELECT * FROM burgers', function(err, result) {
             if (err) throw err;
             callback(result);
         });
-
     },
 
-    // insertOne()
+    // =============== insertOne() ======================= //
     insertOne: function(burger_name, callback) {
 
         // ========= Create a new timestamp ========== //
@@ -66,7 +64,7 @@ var orm = {
 
     },
 
-    // updateOne()
+    // ================= updateOne() ==================== //
     updateOne: function(burgerID, callback) {
 
         // Run MySQL Query
