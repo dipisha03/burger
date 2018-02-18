@@ -11,7 +11,7 @@
 
 * The app will store every burger in a database, whether devoured or not.
 
-Technologies used: JavaScript | MySQL | Node | Express | Handlebars | ORM
+Technologies used: JavaScript | MySQL | Node | Express | Handlebars 
 
 Heroku link: https://nameless-brook-91675.herokuapp.com/
 
