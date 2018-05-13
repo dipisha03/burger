@@ -13,6 +13,6 @@
 
 <b>Technologies used:</b> HTML5 | CSS3 | JavaScript | MySQL | Node | Express | Handlebars
 
-<b>Heroku link:</b> https://nameless-brook-91675.herokuapp.com/
-
 ![Alt text](https://raw.githubusercontent.com/dipisha03/burger/master/public/assets/img/burgerapp.png "Burger APP")
+
+<b>Heroku link:</b> https://nameless-brook-91675.herokuapp.com/
